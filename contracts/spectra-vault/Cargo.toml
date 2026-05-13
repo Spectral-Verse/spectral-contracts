@@ -1,0 +1,19 @@
+[package]
+name = "spectra-vault"
+version = "0.1.0"
+edition = "2021"
+authors = ["Spectra Team"]
+description = "On-chain asset basket and vault accounting for Stellar Soroban."
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+soroban-sdk = "20.0.0"
+
+[dev-dependencies]
+soroban-sdk = { version = "20.0.0", features = ["testutils"] }
+
+[features]
+testutils = ["soroban-sdk/testutils"]
