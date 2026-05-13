@@ -1,22 +1,20 @@
 # Spectra Contracts
 
-Spectra is a suite of Soroban smart contracts on the Stellar network designed for creating and managing transparent, on-chain asset baskets. It allows strategy creators to define asset allocations, and users to participate in these baskets through a share-based vault system.
+Spectra is a production-grade suite of Soroban smart contracts on the Stellar network designed for creating and managing transparent, on-chain asset baskets. It enables strategy creators to define sophisticated asset allocations and allows participants to engage with these baskets through a robust, share-based vault architecture.
 
-## Overview
+## Core Capabilities
 
-Spectra Vaults provide a robust mechanism for:
-- **Vault Creation**: Strategy creators can establish asset baskets with specific targets.
-- **Asset Management**: Supported Stellar assets are managed according to configurable allocation rules.
-- **Deposits & Withdrawals**: Users can deposit supported assets and receive shares, or redeem shares for their proportional share of the vault's assets.
-- **Permissioned Rebalancing**: Authorized rebalance authorities can update target allocations.
-- **Transparent Accounting**: Deterministic share accounting ensures all participants' positions are accurately tracked.
+- **Vault Lifecycle Management**: Establish asset baskets with precise configuration, management roles, and operational status controls.
+- **Dynamic Asset Allocation**: Support for multi-asset baskets with target weights defined in basis points.
+- **Precision Accounting**: Deterministic share-based accounting ensures accurate tracking of user positions and proportional asset ownership.
+- **Permissioned Rebalancing**: Secure mechanisms for authorized authorities to update strategy targets.
+- **Safety Controls**: Built-in pausing mechanisms for deposits and withdrawals to protect participant funds during maintenance or emergencies.
 
-## User Roles
+## System Roles
 
-- **Vault Manager**: Responsible for creating vaults, updating metadata, managing fees, and pausing/unpausing operations.
-- **Depositor**: Users who provide liquidity to the vault in exchange for shares.
-- **Share Holder**: Users holding vault shares, entitled to proportional withdrawals.
-- **Rebalance Authority**: A specialized role permitted to update the vault's asset allocation targets.
+- **Vault Manager**: Oversees vault initialization, metadata updates, fee management, and operational status.
+- **Rebalance Authority**: Specialized role responsible for adjusting asset allocation targets based on strategy requirements.
+- **Depositor/Shareholder**: Participants who provide liquidity to the vault in exchange for minted shares representing their claim.
 
 ## Getting Started
 
