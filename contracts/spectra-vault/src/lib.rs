@@ -17,10 +17,10 @@ use soroban_sdk::{
 };
 
 #[contract]
-pub struct SpectraVault;
+pub struct SpectralVault;
 
 #[contractimpl]
-impl SpectraVault {
+impl SpectralVault {
     /// Creates a new asset basket vault with specified parameters.
     /// 
     /// # Parameters

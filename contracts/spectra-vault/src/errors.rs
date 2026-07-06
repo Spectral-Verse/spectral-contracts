@@ -1,6 +1,6 @@
 use soroban_sdk::contracterror;
 
-/// Custom error types for the Spectra Vault contract.
+/// Custom error types for the Spectral Verse Vault contract.
 /// 
 /// These errors are returned by contract functions when business logic
 /// constraints are violated.

@@ -1,11 +1,11 @@
 #![cfg(test)]
 
-use crate::{types::{AssetAllocation, VaultStatus}, SpectraVault, SpectraVaultClient};
+use crate::{types::{AssetAllocation, VaultStatus}, SpectralVault, SpectralVaultClient};
 use soroban_sdk::{testutils::{Address as _, Ledger}, token, Address, BytesN, Env, String, Vec};
 
-fn setup_test_env(env: &Env) -> (SpectraVaultClient, Address, Address, Address, Address, Address) {
-    let contract_id = env.register_contract(None, SpectraVault);
-    let client = SpectraVaultClient::new(env, &contract_id);
+fn setup_test_env(env: &Env) -> (SpectralVaultClient, Address, Address, Address, Address, Address) {
+    let contract_id = env.register_contract(None, SpectralVault);
+    let client = SpectralVaultClient::new(env, &contract_id);
 
     let manager = Address::generate(env);
     let user = Address::generate(env);

@@ -24,7 +24,7 @@ pub struct AssetAllocation {
     pub target_bps: u32,
 }
 
-/// Static and dynamic configuration parameters for a Spectra vault.
+/// Static and dynamic configuration parameters for a Spectral Verse vault.
 /// 
 /// This struct is stored in persistent storage and defines the core 
 /// behavior and permissions of the vault.
