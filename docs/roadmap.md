@@ -1,6 +1,6 @@
 # Roadmap
 
-Spectra is an evolving project with several planned enhancements.
+Spectral Verse is an evolving project with several planned enhancements.
 
 ## Future Improvements
 
@@ -9,7 +9,7 @@ Spectra is an evolving project with several planned enhancements.
 - **Multi-Manager Permissions**: Support multisig or DAO-based governance for vault management and rebalancing.
 - **Strategy Performance Indexing**: Create off-chain indexers to track and display the historical performance of different vault strategies.
 - **Enhanced Dashboard Integration**: Build a user-friendly frontend for strategy creators to manage vaults and for users to track their positions.
-- **Event Indexing Examples**: Provide reference implementations for indexing Spectra events using tools like Mercury or custom subgraphs.
+- **Event Indexing Examples**: Provide reference implementations for indexing Spectral Verse events using tools like Mercury or custom subgraphs.
 - **Property-Based Testing**: Implement property tests (e.g., using `proptest`) to ensure the robustness of share accounting under a wide range of scenarios.
 - **Formal Specification**: Develop a formal specification for the vault lifecycle and state transitions to further improve security and correctness.
 - **Stellar Asset Contract (SAC) Flows**: Optimize integration with the latest Stellar Asset Contract features and standards.

@@ -7,7 +7,7 @@ If you discover a security vulnerability within this project, please send an e-m
 ## Supported Scope
 
 The following contracts are in scope for security reports:
-- `spectra-vault`
+- `Spectral-Verse`
 
 ## Known Limitations
 

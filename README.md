@@ -1,6 +1,6 @@
-# Spectra Contracts
+# Spectral Contracts
 
-Spectra is a production-grade suite of Soroban smart contracts on the Stellar network designed for creating and managing transparent, on-chain asset baskets. It enables strategy creators to define sophisticated asset allocations and allows participants to engage with these baskets through a robust, share-based vault architecture.
+Spectral Verse is a production-grade suite of Soroban smart contracts on the Stellar network designed for creating and managing transparent, on-chain asset baskets. It enables strategy creators to define sophisticated asset allocations and allows participants to engage with these baskets through a robust, share-based vault architecture.
 
 ## Core Capabilities
 
@@ -54,11 +54,24 @@ For a detailed overview of the contract functions, see [contract-api.md](docs/co
 
 ## Security
 
-Spectra is an open-source project. While we prioritize security and follow best practices, the contracts have not undergone a formal third-party audit. 
+Spectral Verse is an open-source project. While we prioritize security and follow best practices, the contracts have not undergone a formal third-party audit. 
 
 **Warning**: Users should perform their own review before using these contracts with significant funds. Do not rely on these contracts for high-value assets without independent verification.
 
 For more details, see [SECURITY.md](SECURITY.md) and [security-model.md](docs/security-model.md).
+
+## Funding and Drips
+
+This repository is intended to be eligible for [Drips](https://www.drips.network/) funding and participation in [Drips Wave](https://docs.drips.network/wave/) contribution cycles. 
+
+### Maintainer Action Required
+To fully enable Drips funding and repository claiming, maintainers must:
+1. Claim the repository on [Drips App](https://www.drips.network/app)
+2. Configure funding splits (if applicable)
+3. Consider adding a `FUNDING.json` file with approved ownership details (no placeholder addresses should be used)
+4. Review and apply appropriate labels (see `.github/ISSUE_TEMPLATE/` for label suggestions)
+
+For more information, see [docs/drips-readiness.md](docs/drips-readiness.md).
 
 ## License
 

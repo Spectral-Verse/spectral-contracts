@@ -1,10 +1,10 @@
 # Architecture
 
-Spectra is designed as a modular vault system for Stellar assets.
+Spectral Verse is designed as a modular vault system for Stellar assets.
 
 ## System Components
 
-- **Spectra Vault Contract**: The core logic handling accounting, deposits, withdrawals, and permissioned rebalancing.
+- **Spectral Vault Contract**: The core logic handling accounting, deposits, withdrawals, and permissioned rebalancing.
 - **Stellar Asset Contracts (SAC)**: External token contracts that the vault interacts with for asset transfers.
 
 ## Vault Lifecycle
@@ -16,7 +16,7 @@ Spectra is designed as a modular vault system for Stellar assets.
 
 ## Share Accounting
 
-Spectra uses a deterministic share-based accounting system:
+Spectral Verse uses a deterministic share-based accounting system:
 - **First Deposit**: Shares minted = amount deposited.
 - **Subsequent Deposits**: `shares = (deposit_value * total_shares) / total_vault_value`.
 - **Withdrawals**: `asset_amount = (shares_to_burn * asset_balance) / total_shares`.
@@ -35,7 +35,7 @@ The `metadata_hash` field allows strategy creators to link detailed off-chain st
 
 ## Event Design
 
-Spectra emits structured events for all major state changes, including:
+Spectral Verse emits structured events for all major state changes, including:
 - Vault creation
 - Deposits/Withdrawals
 - Configuration updates

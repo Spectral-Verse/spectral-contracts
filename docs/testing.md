@@ -1,6 +1,6 @@
 # Testing Guide
 
-Spectra uses the standard Soroban Rust testing framework.
+Spectral Verse uses the standard Soroban Rust testing framework.
 
 ## Running Tests
 
