@@ -6,11 +6,9 @@ We welcome contributions to Spectral Verse! Whether you're fixing a bug, improvi
 
 ### Finding Issues to Work On
 - Browse the [issues](https://github.com/your-org/spectral-contracts/issues) page
-- Look for labels like `good first issue`, `help wanted`, or `drips-wave` for beginner-friendly or Drips Wave-eligible tasks
+- Look for labels like `good first issue` or `help wanted` for beginner-friendly tasks
 - Comment on an issue to let others know you're working on it
 
-### Drips Wave Contribution
-This repository participates in [Drips Wave](https://docs.drips.network/wave/). Look for issues labeled `drips-wave` for eligible tasks.
 
 ## Local Setup
 
