@@ -87,7 +87,7 @@ fn test_deposit() {
         &manager,
         &asset_a,
         &rebalance_auth,
-        &100,
+        &0, // 0% fee
         &allocations,
     );
 
@@ -102,6 +102,47 @@ fn test_deposit() {
     assert_eq!(shares, deposit_amount); // First deposit: shares = deposit_amount
     assert_eq!(client.get_user_shares(&vault_id, &user), shares);
     assert_eq!(client.get_asset_balance(&vault_id, &asset_a), deposit_amount);
+    assert_eq!(client.get_accrued_fees(&vault_id, &asset_a), 0);
+    assert_eq!(token_a.balance(&client.address), deposit_amount);
+}
+
+#[test]
+fn test_deposit_with_fee() {
+    let env = Env::default();
+    env.mock_all_auths();
+    let (client, manager, user, rebalance_auth, asset_a, asset_b) = setup_test_env(&env);
+
+    let vault_id = BytesN::from_array(&env, &[1u8; 32]);
+    let allocations = Vec::from_array(&env, [
+        AssetAllocation { asset: asset_a.clone(), target_bps: 5000 },
+        AssetAllocation { asset: asset_b.clone(), target_bps: 5000 },
+    ]);
+
+    client.create_vault(
+        &vault_id,
+        &String::from_str(&env, "Fee Vault"),
+        &BytesN::from_array(&env, &[0u8; 32]),
+        &manager,
+        &asset_a,
+        &rebalance_auth,
+        &100, // 1% fee
+        &allocations,
+    );
+
+    let deposit_amount = 1000i128;
+    let fee_amount = 10i128;
+    let net_amount = deposit_amount - fee_amount;
+    let token_a = token::Client::new(&env, &asset_a);
+    
+    token_a.mint(&user, &deposit_amount);
+
+    let shares = client.deposit(&vault_id, &user, &asset_a, &deposit_amount);
+    
+    assert_eq!(shares, net_amount);
+    assert_eq!(client.get_user_shares(&vault_id, &user), net_amount);
+    assert_eq!(client.get_asset_balance(&vault_id, &asset_a), net_amount);
+    assert_eq!(client.get_accrued_fees(&vault_id, &asset_a), fee_amount);
+    assert_eq!(token_a.balance(&client.address), deposit_amount);
 }
 
 #[test]
