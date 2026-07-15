@@ -1,7 +1,7 @@
 use soroban_sdk::{contracttype, Address, BytesN, String, Vec};
 
 /// Operational status of a vault.
-/// 
+///
 /// Used to control whether specific operations like deposits or withdrawals
 /// are currently allowed.
 #[contracttype]
@@ -25,8 +25,8 @@ pub struct AssetAllocation {
 }
 
 /// Static and dynamic configuration parameters for a Spectral Verse vault.
-/// 
-/// This struct is stored in persistent storage and defines the core 
+///
+/// This struct is stored in persistent storage and defines the core
 /// behavior and permissions of the vault.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
