@@ -67,3 +67,37 @@ Claims accrued management fees for the vault manager (Permissioned).
 - `get_user_shares(vault_id: BytesN<32>, user: Address) -> i128`
 - `get_asset_balance(vault_id: BytesN<32>, asset: Address) -> i128`
 - `get_accrued_fees(vault_id: BytesN<32>, asset: Address) -> i128`
+
+## Events
+
+> **Note**: Event consumers should treat the topic order as stable API behaviour.
+
+### `vault created`
+- **Emitted when**: A new vault is successfully created.
+- **Topics**: `["vault", "created", vault_id]`
+- **Data**: `manager_address`
+
+### `vault deposit`
+- **Emitted when**: A user deposits an asset into a vault.
+- **Topics**: `["vault", "deposit", vault_id]`
+- **Data**: `(user_address, asset_address, net_amount, shares_minted)`
+
+### `vault withdraw`
+- **Emitted when**: A user withdraws assets from a vault.
+- **Topics**: `["vault", "withdraw", vault_id]`
+- **Data**: `(user_address, shares_burned, Vec<(asset_address, withdrawn_amount)>)`
+
+### `vault rebalance`
+- **Emitted when**: A vault's allocations are rebalanced.
+- **Topics**: `["vault", "rebalance", vault_id]`
+- **Data**: `(old_allocation_hash, new_allocation_hash)`
+
+### `vault config`
+- **Emitted when**: A vault's configuration or status is updated.
+- **Topics**: `["vault", "config", vault_id]`
+- **Data**: `manager_address`
+
+### `vault fees`
+- **Emitted when**: Accrued management fees are claimed by the manager.
+- **Topics**: `["vault", "fees", vault_id]`
+- **Data**: `(manager_address, Vec<(asset_address, amount_claimed)>)`
