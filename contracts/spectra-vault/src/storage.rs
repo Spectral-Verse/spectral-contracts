@@ -1,8 +1,8 @@
+use crate::types::{AssetAllocation, RebalanceRecord, VaultConfig};
 use soroban_sdk::{contracttype, Address, BytesN, Vec};
-use crate::types::{VaultConfig, AssetAllocation, RebalanceRecord};
 
 /// Keys used for persistent storage in the Spectra Vault contract.
-/// 
+///
 /// Soroban uses a key-value store for state. These variants represent the
 /// different types of data we persist for each vault.
 #[contracttype]
